@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>剪刀石頭布遊戲</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- 引入SweetAlert2 -->
+</head>
+<body>
+    <div class="game-container">
+        <h1>剪刀石頭布遊戲</h1>
+        <div class="button-container">
+            <button id="scissors" onclick="playerChoice(1)" title="剪刀"></button>
+            <button id="rock" onclick="playerChoice(2)" title="石頭"></button>
+            <button id="paper" onclick="playerChoice(3)" title="布"></button>
+        </div>
+        <p id="result" class="result"></p>
+        <p id="score">玩家：0 | 電腦：0</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html

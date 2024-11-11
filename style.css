@@ -1,0 +1,87 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f5;
+    font-family: Arial, sans-serif;
+}
+
+.game-container {
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button {
+    width: 100px;
+    height: 100px;
+    border: none;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    font-size: 18px;
+    color: #fff;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* 按鈕的背景圖片，確保圖片在與 CSS 同一文件夾 */
+#scissors {
+    background-image: url('image/剪刀.png'); /* 剪刀的圖片 */
+}
+
+#rock {
+    background-image: url('image/石頭.png'); /* 石頭的圖片 */
+}
+
+#paper {
+    background-image: url('image/布.png'); /* 布的圖片 */
+}
+
+/* 懸停效果：放大並改變背景顏色及顯示文字 */
+button:hover {
+    transform: scale(1.2);
+    background-color: #ffc107;
+    color: #333;
+}
+
+button#scissors:hover::before {
+    content: "剪刀";
+}
+
+button#rock:hover::before {
+    content: "石頭";
+}
+
+button#paper:hover::before {
+    content: "布";
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.result.win {
+    color: #28a745;
+}
+
+.result.draw {
+    color: #6c757d;
+}
+
+.result.lose {
+    color: #dc3545;
+}
+
+#score {
+    margin-top: 10px;
+    font-size: 18px;
+}
